@@ -179,3 +179,12 @@ p {
     font-weight: bold;
     color: #4e342e;
 }
+#game .btn {
+    margin-top: 20px;
+    background-color: #f44336;
+    color: white;
+}
+
+#game .btn:hover {
+    background-color: #d32f2f;
+}
