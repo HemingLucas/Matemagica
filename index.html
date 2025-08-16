@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>🎲 Missão Matemágica com Personagens 🎲</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>🎉 Missão Matemágica 🎉</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Cute_unicorn_cartoon.svg/800px-Cute_unicorn_cartoon.svg.png" alt="Mascote" class="character">
+
+    <div id="menu">
+        <button class="btn" onclick="showLevelSelect()">🚀 Começar</button>
+        <button class="btn" onclick="showInstructions()">📖 Instruções</button>
+        <button class="btn" onclick="showRanking()">🏆 Ranking</button>
+    </div>
+
+    <div id="instructions" class="hidden">
+        <p>🌟 Ajude nosso unicórnio mágico a vencer os desafios!</p>
+        <p>✨ Responda corretamente as somas, subtrações e multiplicações!</p>
+        <p>😈 Você tem 30 segundos para cada pergunta. Se o tempo acabar, perde pontos!</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Monster_cartoon.svg/640px-Monster_cartoon.svg.png" alt="Vilão" class="character-villain">
+        <button class="btn" onclick="goToMenu()">🔙 Voltar</button>
+    </div>
+
+    <div id="level-select" class="hidden">
+        <h2>Selecione o Nível de Dificuldade</h2>
+        <input type="text" id="playerName" placeholder="Digite seu nome" maxlength="15">
+        <button class="btn" onclick="startGame('easy')">👶 Fácil</button>
+        <button class="btn" onclick="startGame('medium')">🧠 Médio</button>
+        <button class="btn" onclick="startGame('hard')">🧙‍♂️ Difícil</button>
+        <button class="btn" onclick="goToMenu()">🔙 Voltar</button>
+    </div>
+
+    <div id="game" class="hidden">
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+        <div id="timer">Tempo: 30s</div>
+        <div id="question"></div>
+        <div id="options"></div>
+        <div id="scoreDisplay"></div>
+    </div>
+
+    <div id="result" class="hidden">
+        <h2>🎊 Você venceu o vilão da matemática! 🎊</h2>
+        <p>Sua pontuação final foi:</p>
+        <div id="finalScore"></div>
+        <button class="btn" onclick="goToMenu()">🏠 Menu</button>
+    </div>
+
+    <div id="ranking" class="hidden">
+        <h2>🏆 Ranking dos Matemágicos 🏆</h2>
+        <ul id="ranking-list"></ul>
+        <button class="btn" onclick="goToMenu()">🔙 Voltar</button>
+    </div>
+    
+    <audio id="acertoSom" src="https://www.soundboard.com/mediafiles/et/Y2KxNTgzNjgyMzMyKDE1NjcwOTk3MjE3MDY).mp3"></audio>
+    <audio id="erroSom" src="https://www.soundboard.com/mediafiles/et/Y2KxNTgxMzQ4NDM1KDE1NjcwOTk3MjI2NjY).mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
